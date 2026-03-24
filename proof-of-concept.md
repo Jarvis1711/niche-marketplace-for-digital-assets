@@ -1,25 +1,20 @@
-# Proof of Concept - Niche Marketplace for Digital Assets
+# Proof of Concept - Niche Marketplace For Digital Assets
 
-## Scope
-- App category: Education
-- Entity model: Niche Marketplace Learning Unit
-- Deployable stack: Flask + SQLAlchemy + Gunicorn + Docker + CI
+## Deployment Readiness
+- Web app + API routes active
+- Container and PaaS deployment files included
+- Automated test suite and CI workflow included
 
-## Dynamic Field Configuration
-- Learner Group: `learner_group` (text)
-- Difficulty (1-5): `difficulty` (number)
-- Material Notes: `material_notes` (textarea)
-
-## Run Evidence Commands
+## Smoke Commands
 ```bash
-python app.py
+python run.py
 curl http://localhost:5000/api/health
 curl http://localhost:5000/api/schema
-curl -X POST http://localhost:5000/api/records   -H "Content-Type: application/json"   -d '{"title":"Demo Record","status":"in-session","payload":{"learner_group":"Demo value","difficulty":12,"material_notes":"seed note"}}'
+curl -X POST http://localhost:5000/api/items   -H "Content-Type: application/json"   -d '{"title":"Phase3 Demo","status":"draft","payload":{"client":"sample","value_estimate":5,"commercial_notes":"notes"}}'
 curl http://localhost:5000/api/metrics
 ```
 
 ## Metadata
-- Idea number: 59
-- Generated UTC: 2026-03-24T15:52:22.188137+00:00
-- Status: Phase-2 complete
+- Generated UTC: 2026-03-24T16:15:11.602737+00:00
+- Phase: 3
+- Domain: Business
